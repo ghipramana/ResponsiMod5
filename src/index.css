@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #faf5ee;
+  --color-latte: #ecdfcc;
+  --color-caramel: #c68642;
+  --color-roast: #6f4e37;
+  --color-espresso: #2b1a12;
+}
+
+html, body, #root { min-height: 100%; }
+body {
+  background: var(--color-cream);
+  color: var(--color-espresso);
+  font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.input {
+  width: 100%;
+  border: 1px solid var(--color-latte);
+  background: #fff;
+  border-radius: 0.6rem;
+  padding: 0.6rem 0.8rem;
+  font-size: 0.95rem;
+  outline: none;
+}
+.input:focus { border-color: var(--color-caramel); box-shadow: 0 0 0 3px rgb(198 134 66 / 0.18); }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem;
+  border-radius: 0.6rem; padding: 0.55rem 1rem; font-weight: 600; font-size: 0.9rem;
+  transition: background 0.15s, opacity 0.15s; cursor: pointer;
+}
+.btn:disabled { opacity: 0.45; cursor: not-allowed; }
+.btn-primary { background: var(--color-espresso); color: #fff; }
+.btn-primary:hover:not(:disabled) { background: #43291c; }
+.btn-ghost { background: #fff; border: 1px solid var(--color-latte); color: var(--color-espresso); }
+.btn-ghost:hover:not(:disabled) { background: var(--color-latte); }
+.btn-danger { background: #b3261e; color: #fff; }
+.btn-danger:hover:not(:disabled) { background: #8f1e18; }
